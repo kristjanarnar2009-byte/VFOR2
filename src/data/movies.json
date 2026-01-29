@@ -1,0 +1,15 @@
+[
+    {
+        "id": "how to train your dragon",
+        "title": "How To Train Your Dragon",
+        "year": 2010,
+        "description": "Um strák sem er víkingur sem temur dreka."
+    },
+
+    {
+        "id": "wall-e",
+        "title": "Wall-E",
+        "year": 2008,
+        "description": "Þetta er um ruslar vélmenni sem þarf að hreinsa alla Jörðinna"
+    }
+]

@@ -1,8 +1,15 @@
-<%- include('partials/header') %>
-
-<section class="intro">
-    <p>For gods sake of Humanity, he won't be saving no one, because of me.</p>
-    <p>Ef þú last efri partinn þá hef ég staðsetningunna þínna, þanning að ég veit hvar þú átt heima.</p>
-</section>
-
-<%- include('partials/footer') %>
+<include('partials/header')>
+<main>
+    <h1>Vinsælar myndir</h1>
+    <div class="movie-grid">
+        <% movies.forEach(movie => { %>
+            <div class="movie-card">
+                <img src="<%= movie.image %>" alt="<%= movie.title %>">
+                <h3><%= movie.title %></h3>
+                <p><%= movie.year %></p>
+                <a href="/movie/<%= movie.id %>" class="btn">Skoða nánar</a>
+            </div>
+        <% }) %>
+    </div>
+</main>
+<include('partials/footer')>

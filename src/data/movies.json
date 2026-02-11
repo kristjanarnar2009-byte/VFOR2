@@ -4,12 +4,13 @@
         "title": "How To Train Your Dragon",
         "year": 2010,
         "description": "Um strák sem er víkingur sem temur dreka.",
-        "image": "image/download.jpg"
+        "image": "images/dragon.jpg"
     },
     {
         "id": "wall-e",
         "title": "Wall-E",
         "year": 2008,
-        "description": "Þetta er um ruslar vélmenni sem þarf að hreinsa alla Jörðinna"
+        "description": "Þetta er um ruslar vélmenni sem þarf að hreinsa alla Jörðinna",
+        "image": "images/wall_e.jpg"
     }
 ]

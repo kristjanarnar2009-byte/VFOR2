@@ -12,5 +12,12 @@
         "year": 2008,
         "description": "Þetta er um ruslar vélmenni sem þarf að hreinsa alla Jörðinna",
         "image": "images/wall_e.jpg"
+    },
+    {
+        "id": "my little pony: the movie",
+        "title": "My Little Pony: The Movie",
+        "year": 2017,
+        "description": "Er um pony vini sem fara í Ævintýri til sæhesta drottninguna fyrir hjálp, en tempest hefur önnur plön þegar seinasta princessann",
+        "image": "images/mlp.jpg"
     }
 ]

@@ -1,24 +1,37 @@
-const fs = require('fs');
-const path = require('path');
-
-const loadData = () => {
-    const filePath = path.join(__dirname, '../data/movies.json');
-    const fileData = fs.readFileSync(filePath);
-    return JSON.parse(fileData);
-};
+const db = require('./db');
 
 
-const getMovies = () => {
-    const movies = loadData();
-    return movies;
-};
 
-const getMovieById = (id) => {
-    const movies = loadData();
-    return movies.find((m) => m.id === id);
-};
+
+async function getMovies() {
+    const q = 'SELECT * FROM movies ORDER BY created_at DESC';
+    try {
+      const result = await db.query(q);
+      return result.rows;
+    } catch (e) {
+      console.error('Gat ekki sótt myndir', e);
+      return [];
+    }
+}
+
+async function getMovieById(id) {
+    const q = 'SELECT * FROM movies WHERE id = $1';
+    try {
+      const result = await db.query(q, [id]);
+
+      if (result.rows.length === 0) {
+        return null;
+      }
+
+      return result.rows[0];
+    } catch (e) {
+      console.error('Gat ekki sótt mynd', e)
+      return null;
+    }
+}
+
 
 module.exports = {
     getMovies,
-    getMovieById
+    getMovieById,
 };
